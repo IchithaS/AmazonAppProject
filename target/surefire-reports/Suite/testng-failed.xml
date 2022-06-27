@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" parallel="tests" name="Test1(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="sample1.AmazonAppTest">
+        <methods>
+          <include name="setUPTest"/>
+          <include name="Test"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- sample1.AmazonAppTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="1" parallel="tests" name="Test2(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="sample1.AmazonAppTest">
+        <methods>
+          <include name="setUPTest"/>
+          <include name="Test"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- sample1.AmazonAppTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
