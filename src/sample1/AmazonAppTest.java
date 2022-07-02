@@ -27,12 +27,12 @@ public class AmazonAppTest  extends BaseTest {
 		
 	     //Open Google
 		 driver1.get("https://www.google.com");
-	     Thread.sleep(1000);
+	     Thread.sleep(3000);
 	     test.log(Status.PASS, "google");
 	     
 	     //opening Amazon
         driver1.get("https://www.amazon.com");
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         test.log(Status.PASS, "opening amazon website");
 		
 		  driver1.get(
@@ -56,13 +56,13 @@ public class AmazonAppTest  extends BaseTest {
        searchboxmob.submit();
        driver1.findElement(By.linkText("Apple iPhone XR (128GB) - (Product) RED")).click();
        switchToWindow();
-       Thread.sleep(2000);
+       Thread.sleep(3000);
       
        WebElement dropdown = driver1.findElement(By.xpath("//select[@name='quantity']"));
        Select selectObject = new Select(dropdown);
        //selectObject.selectByIndex(1);
        selectObject.selectByValue("2");
-       Thread.sleep(1000);
+       Thread.sleep(3000);
        test.log(Status.PASS, "search product");
        /*WebElement cart = driver1.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]"));
        cart.click();*/
@@ -73,20 +73,20 @@ public class AmazonAppTest  extends BaseTest {
        WebElement addcart = driver1.findElement(By.xpath("//*[@id='add-to-cart-button']"));
       ((JavascriptExecutor)driver1).executeScript("arguments[0].click()",addcart);
        driver1.findElement(By.id("attach-close_sideSheet-link")).click();
-       Thread.sleep(1000);
+       Thread.sleep(3000);
        //opening cart
        driver1.get("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
-       Thread.sleep(1000);
+       Thread.sleep(3000);
        test.log(Status.PASS, "add to cart");
        
      //purchasing Laptop
       WebElement searchboxlaptop = driver1.findElement(By.id("twotabsearchtextbox"));
       searchboxlaptop.sendKeys("Laptop");
       searchboxlaptop.submit();
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       driver1.findElement(By.linkText("Honor MagicBook X 15, Intel Core i3-10110U / 15.6 inch (39.62 cm) FHD IPS Anti-Glare Thin and Light Laptop (8GB/256GB PCIe SSD/Windows 10/Aluminium Metal Body/1.56Kg), Silver, (BohrBR-WAI9A)")).click();
       switchToWindow();
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       test.log(Status.PASS, "second product");
     
      //add to cart
@@ -94,7 +94,7 @@ public class AmazonAppTest  extends BaseTest {
       ((JavascriptExecutor)driver1).executeScript("arguments[0].click()",addcartlaptop);
       driver1.findElement(By.id("attach-close_sideSheet-link")).click();
       driver1.get("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       
       //WebElement cart1 = driver1.findElement(By.xpath("//input[@class='a-button-input']"));
       //((JavascriptExecutor)driver1).executeScript("arguments[0].click()",cart1);
@@ -106,7 +106,7 @@ public class AmazonAppTest  extends BaseTest {
       WebElement deletecart = driver1.findElement(By.xpath("//*[@value='Delete']"));
       ((JavascriptExecutor)driver1).executeScript("arguments[0].click()",deletecart);
       //driver1.findElement(By.id("delete")).click();
-      Thread.sleep(1000);
+      Thread.sleep(3000);
       
       //driver1.switchTo().newWindow("https://www.amazon.in/New-Apple-iPhone-XR-128GB/dp/B08L89NSQK/ref=sr_1_1_sspa?crid=2CHMACBOJZ4M6&keywords=iphone%2Bx&qid=1653993408&sprefix=%2Caps%2C317&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRElWWURYQ0wxTkwyJmVuY3J5cHRlZElkPUEwNTkwMjIzMjA2TDdFT1gwTUZDUSZlbmNyeXB0ZWRBZElkPUEwNDc4Mjg5M05OVDI5SlM1NDExRSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1");
      //driver1.findElement(By.xpath("//span[@id='submit.add-to-cart-announce' and contains(text(),'Add to Cart')]")).click();
