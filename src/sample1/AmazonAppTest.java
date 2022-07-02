@@ -54,6 +54,7 @@ public class AmazonAppTest  extends BaseTest {
        WebElement searchboxmob = driver1.findElement(By.id("twotabsearchtextbox"));
        searchboxmob.sendKeys("iphone x");
        searchboxmob.submit();
+		 Thread.sleep(3000);
        driver1.findElement(By.linkText("Apple iPhone XR (128GB) - (Product) RED")).click();
        switchToWindow();
        Thread.sleep(3000);
@@ -64,6 +65,7 @@ public class AmazonAppTest  extends BaseTest {
        selectObject.selectByValue("2");
        Thread.sleep(3000);
        test.log(Status.PASS, "search product");
+		  Thread.sleep(3000);
        /*WebElement cart = driver1.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]"));
        cart.click();*/
        //driver1.switchTo().window("https://www.amazon.in/New-Apple-iPhone-XR-128GB/dp/B08L89NSQK/ref=sr_1_1_sspa?crid=2CHMACBOJZ4M6&keywords=iphone%2Bx&qid=1653993408&sprefix=%2Caps%2C317&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRElWWURYQ0wxTkwyJmVuY3J5cHRlZElkPUEwNTkwMjIzMjA2TDdFT1gwTUZDUSZlbmNyeXB0ZWRBZElkPUEwNDc4Mjg5M05OVDI5SlM1NDExRSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1");
@@ -71,7 +73,9 @@ public class AmazonAppTest  extends BaseTest {
        
       //add to cart
        WebElement addcart = driver1.findElement(By.xpath("//*[@id='add-to-cart-button']"));
+		  Thread.sleep(3000);
       ((JavascriptExecutor)driver1).executeScript("arguments[0].click()",addcart);
+		  Thread.sleep(3000);
        driver1.findElement(By.id("attach-close_sideSheet-link")).click();
        Thread.sleep(3000);
        //opening cart
