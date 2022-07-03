@@ -55,7 +55,7 @@ public class AmazonAppTest  extends BaseTest {
        searchboxmob.sendKeys("iphone x");
        searchboxmob.submit();
 		 Thread.sleep(3000);
-       driver1.findElement(By.linkText("Apple iPhone XR (128GB) - (Product) RED")).click();
+       driver1.findElement(By.linkText("Apple iPhone XR (128GB) - Coral")).click();
        switchToWindow();
        Thread.sleep(3000);
       
@@ -88,7 +88,7 @@ public class AmazonAppTest  extends BaseTest {
       searchboxlaptop.sendKeys("Laptop");
       searchboxlaptop.submit();
       Thread.sleep(3000);
-      driver1.findElement(By.linkText("Honor MagicBook X 15, Intel Core i3-10110U / 15.6 inch (39.62 cm) FHD IPS Anti-Glare Thin and Light Laptop (8GB/256GB PCIe SSD/Windows 10/Aluminium Metal Body/1.56Kg), Silver, (BohrBR-WAI9A)")).click();
+      driver1.findElement(By.linkText("Hp 14S 11Th Gen Intel Core I3- 8Gb Ram/256Gb Ssd 14 Inches Fhd,Micro-Edge,Anti-Glare,IPS Display/Uhd Graphics/ Windows 11 Home/ Ms Office/ Alexa Built-in/ 1.46Kg/ Natural Silver - 14S-Dy2506Tu")).click();
       switchToWindow();
       Thread.sleep(3000);
       test.log(Status.PASS, "second product");
